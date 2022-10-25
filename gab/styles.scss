@@ -6,45 +6,45 @@ $white: #ddd;
 $font: "IM Fell English", consolas;
 @font-face {
   font-family: Scwab;
-  src: url(/assets/fonts/Schwab.ttf);
+  src: url(assets/fonts/Schwab.ttf);
 }
 @font-face {
   font-family: Basketvalley;
-  src: url(/assets/fonts/BasketvalleyOldFace.ttf);
+  src: url(assets/fonts/BasketvalleyOldFace.ttf);
 }
 @font-face {
   font-family: MedievalTimes;
-  src: url(/assets/fonts/MedievalTimes.ttf);
+  src: url(assets/fonts/MedievalTimes.ttf);
 }
 
 @font-face {
   font-family: OldEnglish;
-  src: url(/assets/fonts/OldEnglishFive.ttf);
+  src: url(assets/fonts/OldEnglishFive.ttf);
 }
 @font-face {
   font-family: OldDrawn;
-  src: url(/assets/fonts/DrawnOldEnglish.ttf);
+  src: url(assets/fonts/DrawnOldEnglish.ttf);
 }
 @font-face {
   font-family: OldCopperfield;
-  src: url(/assets/fonts/OldCopperfield.ttf);
+  src: url(assets/fonts/OldCopperfield.ttf);
 }
 @font-face {
   font-family: Symphonic;
-  src: url(/assets/fonts/Symphonic.ttf);
+  src: url(assets/fonts/Symphonic.ttf);
 }
 @font-face {
   font-family: Corogh;
-  src: url(/assets/fonts/CoroghGorge.otf);
+  src: url(assets/fonts/CoroghGorge.otf);
 }
 
 @font-face {
   font-family: CoroghRough;
-  src: url(/assets/fonts/CoroghGorgeRough.otf);
+  src: url(assets/fonts/CoroghGorgeRough.otf);
 }
 @font-face {
   font-family: Cloister;
-  src: url(/assets/fonts/CloisterBlackLight.ttf);
+  src: url(assets/fonts/CloisterBlackLight.ttf);
 }
 * {
   padding: 0;
@@ -61,7 +61,7 @@ p{
 html {
   scroll-behavior: smooth;
   background: #333;
-  background-image: url(/assets/pngs/starrynight.png);
+  background-image: url(assets/pngs/starrynight.png);
   background-size: 30%; 
   background-repeat: repeat;
   position: relative;
@@ -250,7 +250,7 @@ nav {
     width: 400px;
     color: black;
     // border: 2px solid red;
-    background-image: url("/assets/backgrounds/sharp-border.png");
+    background-image: url("assets/backgrounds/sharp-border.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     filter: grayscale(50%);

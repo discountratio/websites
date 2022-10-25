@@ -14,14 +14,14 @@ function services(title, img, imgAlt, text, dollars) {
 
 let service02 = new services(
   "Charts for the Natal Stars",
-  "/assets/svgs/towel.svg",
+  "assets/svgs/towel.svg",
   "woman",
   "A natal chart reading you can take home with you!",
   50.0
 );
 let service03 = new services(
   "Birth Chart Reading",
-  "/assets/svgs/frame2.svg",
+  "assets/svgs/frame2.svg",
   "woman",
   "A natal chart reading you can take home with you!",
   50.0
@@ -30,7 +30,7 @@ let service03 = new services(
 
 let service04 = new services(
     "Texas Holdem",
-    "/assets/svgs/peacock.svg",
+    "assets/svgs/peacock.svg",
     "woman",
     "A natal chart reading you can take home with you!",
     50.0
@@ -39,7 +39,7 @@ let service04 = new services(
   
 let service05 = new services(
     "Uno Reverse",
-    "/assets/svgs/bugs.svg",
+    "assets/svgs/bugs.svg",
     "woman",
     "A natal chart reading you can take home with you!",
     50.0
@@ -47,7 +47,7 @@ let service05 = new services(
 
   let service07 = new services(
     "Nick Cannons Kids Deck",
-    "/assets/svgs/heroish.svg",
+    "assets/svgs/heroish.svg",
     "woman",
     "A natal chart reading you can take home with you!",
     50.0
@@ -56,14 +56,14 @@ let service05 = new services(
   
 let service06 = new services(
     "Recipes for a fun weekend",
-    "/assets/svgs/wander.svg",
+    "assets/svgs/wander.svg",
     "woman",
     "A natal chart reading you can take home with you!",
     50.0
   );
   let service10 = new services(
     "Uno Reverse",
-    "/assets/svgs/bugs.svg",
+    "assets/svgs/bugs.svg",
     "woman",
     "A natal chart reading you can take home with you!",
     50.0
@@ -71,7 +71,7 @@ let service06 = new services(
 
   let service08 = new services(
     "Nick Cannons Kids Deck",
-    "/assets/svgs/heroish.svg",
+    "assets/svgs/heroish.svg",
     "woman",
     "A natal chart reading you can take home with you!",
     50.0
@@ -80,7 +80,7 @@ let service06 = new services(
   
 let service09 = new services(
     "Recipes for a fun weekend",
-    "/assets/svgs/wander.svg",
+    "assets/svgs/wander.svg",
     "woman",
     "A natal chart reading you can take home with you!",
     50.0
