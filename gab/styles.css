@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IM+Fell+English:ital@0;1&family=Raleway:wght@200;300;400;500;600;800;900&family=Roboto:wght@300;400;500;700;900&family=Source+Code+Pro&family=UnifrakturCook&display=swap");
+@font-face {
+  font-family: Scwab;
+  src: url(/assets/fonts/Schwab.ttf);
+}
+@font-face {
+  font-family: Basketvalley;
+  src: url(/assets/fonts/BasketvalleyOldFace.ttf);
+}
+@font-face {
+  font-family: MedievalTimes;
+  src: url(/assets/fonts/MedievalTimes.ttf);
+}
+@font-face {
+  font-family: OldEnglish;
+  src: url(/assets/fonts/OldEnglishFive.ttf);
+}
+@font-face {
+  font-family: OldDrawn;
+  src: url(/assets/fonts/DrawnOldEnglish.ttf);
+}
+@font-face {
+  font-family: OldCopperfield;
+  src: url(/assets/fonts/OldCopperfield.ttf);
+}
+@font-face {
+  font-family: Symphonic;
+  src: url(/assets/fonts/Symphonic.ttf);
+}
+@font-face {
+  font-family: Corogh;
+  src: url(/assets/fonts/CoroghGorge.otf);
+}
+@font-face {
+  font-family: CoroghRough;
+  src: url(/assets/fonts/CoroghGorgeRough.otf);
+}
+@font-face {
+  font-family: Cloister;
+  src: url(/assets/fonts/CloisterBlackLight.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+p {
+  font-size: 1.25rem;
+  font-family: sans-serif;
+  padding: 2rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #333;
+  background-image: url(/assets/pngs/starrynight.png);
+  background-size: 30%;
+  background-repeat: repeat;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+textarea {
+  resize: none;
+}
+
+section {
+  width: clamp(600px, 100vw, 1200px);
+  top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+section h2 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-family: Symphonic;
+  letter-spacing: 4px;
+  font-weight: 200;
+  width: 100%;
+  padding-left: 2rem;
+  text-transform: capitalize;
+}
+
+.mainpage {
+  width: clamp(600px, 100vw, 1200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.nav-background {
+  width: 100vw;
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: space-evenly;
+  box-shadow: 0px 1px 3px white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  height: 2rem;
+  line-height: 2rem;
+  width: 100%;
+  padding: 0.5rem 0;
+}
+nav .nav-logo {
+  font-size: 2rem;
+  font-family: OldEnglish;
+  color: #9b7ddf;
+  text-shadow: 3px 3px 3px #4a366e;
+}
+nav .nav-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 1.25rem;
+}
+nav .nav-list li {
+  font-family: Raleway;
+  letter-spacing: 0px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  transition: color 1000ms, font-size 500ms;
+}
+nav .nav-list li:hover {
+  color: #9b7ddf;
+  font-size: 2rem;
+}
+nav #nav-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+nav #nav-icons i {
+  color: white;
+  font-size: 2rem;
+  transition: color 200ms, scale 200ms;
+}
+nav #nav-icons i:hover {
+  color: #9b7ddf;
+  scale: 1.2;
+}
+
+#home {
+  position: relative;
+  height: 100vh;
+}
+#home h1 {
+  font-size: clamp(2rem, 3vw, 8rem);
+  white-space: nowrap;
+  font-family: OldEnglish;
+  text-shadow: 0px 0px #9b7ddf;
+  font-weight: 200;
+  position: absolute;
+  top: 10%;
+  left: 50;
+  opacity: 40%;
+  scale: 1;
+  transition: opacity 1200ms, scale 4000ms, top 3000ms ease-in-out, text-shadow 2000ms;
+}
+#home img {
+  border-radius: 100%;
+  width: 80vh;
+}
+
+#home:hover h1 {
+  opacity: 90%;
+  scale: 1.5;
+  top: 70%;
+  text-shadow: 3px 3px 3px #9b7ddf, -3px 3px 3px #9b7ddf, 3px -3px 3px #9b7ddf, -3px -3px 3px #9b7ddf;
+}
+
+#consultations-grid {
+  display: grid;
+  width: clamp(600px, 100vw, 1600px);
+  margin: 0 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+  grid-template-rows: repeat(auto-fill, -webkit-fit-content);
+  grid-template-rows: repeat(auto-fill, fit-content);
+  justify-content: center;
+  gap: 2vw;
+}
+#consultations-grid .consultation-card {
+  background-color: #212129;
+  width: 400px;
+  color: black;
+  background-image: url("/assets/backgrounds/sharp-border.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  filter: grayscale(50%);
+}
+#consultations-grid .consultation-inner {
+  display: grid;
+  padding: 0 3rem 3rem;
+  margin: 1.5rem 0;
+  gap: 1rem;
+  filter: brightness(80%);
+  height: 700px;
+  position: relative;
+}
+#consultations-grid .consultation-title {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  color: white;
+  font-family: OldCopperfield;
+  letter-spacing: 2px;
+}
+#consultations-grid .consultation-text {
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: sans-serif;
+}
+#consultations-grid .consultation-price, #consultations-grid .consultation-dollars {
+  font-size: 2rem;
+  text-align: right;
+  font-family: OldEnglish;
+  position: absolute;
+  bottom: 2rem;
+  right: 3rem;
+}
+#consultations-grid .consultation-img {
+  display: block;
+  margin: auto;
+  width: 250px;
+  image-rendering: optimizeQuality;
+  filter: blur(4px);
+  z-index: 999;
+}
+
+#consultations-grid .consultation-card {
+  transition: scale 500ms, background-color 500ms, box-shadow 500ms, filter 500ms;
+}
+#consultations-grid .consultation-card .consultation-inner {
+  transition: scale 500ms, background-color 500ms, box-shadow 500ms, filter 500ms;
+}
+#consultations-grid .consultation-card .consultation-title {
+  transition: scale 500ms, background-color 500ms;
+}
+#consultations-grid .consultation-card .consultation-text {
+  transition: scale 500ms, background-color 500ms;
+}
+#consultations-grid .consultation-card img {
+  transition: scale 500ms, filter 500ms;
+}
+#consultations-grid .consultation-card:hover {
+  scale: 1.2;
+  box-shadow: 18px 12px 10px white;
+  z-index: 10000;
+  background-color: black;
+  filter: grayscale(0%);
+}
+#consultations-grid .consultation-card:hover .consultation-inner {
+  filter: brightness(100%);
+}
+#consultations-grid .consultation-card:hover .consultation-title {
+  scale: 0.95;
+}
+#consultations-grid .consultation-card:hover .consultation-text {
+  scale: 1.1;
+}
+#consultations-grid .consultation-card:hover img {
+  scale: 1.4;
+  filter: blur(0px);
+}
+
+#blog .blog-post i {
+  color: red;
+  font-size: 4rem;
+  text-align: right;
+  width: 100%;
+}/*# sourceMappingURL=styles.css.map */
