@@ -1,43 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IM+Fell+English:ital@0;1&family=Raleway:wght@200;300;400;500;600;800;900&family=Roboto:wght@300;400;500;700;900&family=Source+Code+Pro&family=UnifrakturCook&display=swap");
 @font-face {
   font-family: Scwab;
-  src: url(/assets/fonts/Schwab.ttf);
+  src: url(assets/fonts/Schwab.ttf);
 }
 @font-face {
   font-family: Basketvalley;
-  src: url(/assets/fonts/BasketvalleyOldFace.ttf);
+  src: url(assets/fonts/BasketvalleyOldFace.ttf);
 }
 @font-face {
   font-family: MedievalTimes;
-  src: url(/assets/fonts/MedievalTimes.ttf);
+  src: url(assets/fonts/MedievalTimes.ttf);
 }
 @font-face {
   font-family: OldEnglish;
-  src: url(/assets/fonts/OldEnglishFive.ttf);
+  src: url(assets/fonts/OldEnglishFive.ttf);
 }
 @font-face {
   font-family: OldDrawn;
-  src: url(/assets/fonts/DrawnOldEnglish.ttf);
+  src: url(assets/fonts/DrawnOldEnglish.ttf);
 }
 @font-face {
   font-family: OldCopperfield;
-  src: url(/assets/fonts/OldCopperfield.ttf);
+  src: url(assets/fonts/OldCopperfield.ttf);
 }
 @font-face {
   font-family: Symphonic;
-  src: url(/assets/fonts/Symphonic.ttf);
+  src: url(assets/fonts/Symphonic.ttf);
 }
 @font-face {
   font-family: Corogh;
-  src: url(/assets/fonts/CoroghGorge.otf);
+  src: url(assets/fonts/CoroghGorge.otf);
 }
 @font-face {
   font-family: CoroghRough;
-  src: url(/assets/fonts/CoroghGorgeRough.otf);
+  src: url(assets/fonts/CoroghGorgeRough.otf);
 }
 @font-face {
   font-family: Cloister;
-  src: url(/assets/fonts/CloisterBlackLight.ttf);
+  src: url(assets/fonts/CloisterBlackLight.ttf);
 }
 * {
   padding: 0;
@@ -54,7 +54,7 @@ p {
 html {
   scroll-behavior: smooth;
   background: #333;
-  background-image: url(/assets/pngs/starrynight.png);
+  background-image: url(assets/pngs/starrynight.png);
   background-size: 30%;
   background-repeat: repeat;
   position: relative;
@@ -204,7 +204,7 @@ nav #nav-icons i:hover {
   background-color: #212129;
   width: 400px;
   color: black;
-  background-image: url("/assets/backgrounds/sharp-border.png");
+  background-image: url("assets/backgrounds/sharp-border.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   filter: grayscale(50%);
