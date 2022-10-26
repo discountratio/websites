@@ -163,7 +163,8 @@ nav #nav-icons i:hover {
 
 #home {
   position: relative;
-  height: 100vh;
+  height: 90vh;
+  top: 0;
 }
 #home h1 {
   font-size: clamp(2rem, 3vw, 8rem);
@@ -244,6 +245,7 @@ nav #nav-icons i:hover {
   display: block;
   margin: auto;
   width: 250px;
+  height: 400px;
   image-rendering: optimizeQuality;
   filter: blur(4px);
   z-index: 999;
