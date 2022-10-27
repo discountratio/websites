@@ -234,131 +234,69 @@ nav {
 //--END ABOUT
 // CONSULTATIONS
 #consultations {
-//  background: red;
-}
-#consultations-grid {
-  display: grid;
-  width: clamp(600px, 100vw, 1600px);
-  margin: 0 4rem;
-  // background-color:#323949;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
-  grid-template-rows: repeat(auto-fill, fit-content);
 
-  justify-content: center;
-  gap: 2vw;
-  .consultation-card {
-    background-color: #212129;
-    width: 400px;
-    color: black;
-    // border: 2px solid red;
-    background-image: url("assets/backgrounds/sharp-border.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    filter: grayscale(50%);
-  }
-  
-  .consultation-inner {
-    // margin: 1rem;
+  #consultations-grid {
     display: grid;
-    padding: 0 3rem 3rem;
-    margin: 1.5rem 0;
-    gap: 1rem;
-    filter: brightness(80%);
-    height: 700px;
-    position: relative;
+    width: clamp(600px, 100vw, 1600px);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+    grid-template-rows: repeat(auto-fill, fit-content);
+    justify-content: center;
+    gap: 2vw;
+
+    .consultation-card {
+      background-color: #212129;
+      width: 400px;
+      color: black;
+      // border: 2px solid red;
+      background-image: url("assets/cards/cardback.png");
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      border: 4px solid red;
+     
+
+
+      .consultation-inner {
+        // margin: 1rem;
+        display: grid;
+        padding: 0 3rem 3rem;
+        margin: 1.5rem 0;
+        gap: 1rem;
+        filter: brightness(80%);
+        height: 700px;
+        position: relative;
+      }
+      .consultation-title {
+        font-family: OldDrawn;
+      }
+      
+      .consultation-text {
+      }
+      .consultation-price, .consultation-dollars {
+        font-family: OldDrawn;
+        position: absolute;
+        bottom: 2rem;
+        right: 3rem;
+      }
+      .consultation-img {
+        display: block;
+        margin: auto;
+        width: 250px;
+        height: 400px;
+        image-rendering: optimizeQuality;
+        filter: blur(4px);
+        z-index: 999;
+      }
+    }
+    
+
+    
   }
-  .consultation-title {
-    font-size: 1.8rem;
-    line-height: 2rem;
-    padding-top: 1rem;
-    text-align: center;
-  
-    color: white;
-    // font-family: MedievalTimes;
-    // font-family: Symphonic;
-    // font-family: Schwab;
-    // font-family: OldEnglish;
-    // font-family: OldDrawn;
-    font-family: OldCopperfield;
-  // text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  .consultation-text {
-    font-size: 1.2rem;
-    text-align: center;
-    font-family: sans-serif;
-  }
-  .consultation-price, .consultation-dollars {
-    font-size: 2rem;
-    text-align: right;
-    font-family: OldEnglish;
-    position: absolute;
-    bottom: 2rem;
-    right: 3rem;
-  }
-  .consultation-img {
-    display: block;
-    margin: auto;
-    width: 250px;
-    height: 400px;
-    image-rendering: optimizeQuality;
-    filter: blur(4px);
-    z-index: 999;
-  }
-  
 }
+
 
 
 //hover effects
-$card-transition-speed: 500ms;
 
-#consultations-grid{
-.consultation-card {
-  transition: scale $card-transition-speed,
-    background-color $card-transition-speed, box-shadow $card-transition-speed,
-    filter $card-transition-speed;
-  .consultation-inner {
-    transition: scale $card-transition-speed,
-      background-color $card-transition-speed, box-shadow $card-transition-speed,
-      filter $card-transition-speed;
-  }
-  .consultation-title {
-    transition: scale $card-transition-speed,
-      background-color $card-transition-speed;
-  }
-  .consultation-text {
-    transition: scale $card-transition-speed,
-      background-color $card-transition-speed;
-  }
-  img {
-    transition: scale $card-transition-speed, filter $card-transition-speed;
-  }
-
-  &:hover {
-    scale: 1.2;
-    box-shadow: 18px 12px 10px  white;
-    z-index: 10000;
-    
-
-    background-color: black;
-    filter: grayscale(0%);
-    .consultation-inner {
-      filter: brightness(100%);
-    }
-    .consultation-title {
-      scale: 0.95;
-    }
-    .consultation-text {
-      scale: 1.1;
-    }
-    img {
-      scale: 1.4;
-      filter: blur(0px);
-    }
-  }
-}
-}
 //--END CONSULTATIONS
 
 //BLOG

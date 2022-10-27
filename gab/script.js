@@ -1,22 +1,22 @@
 
-const consultations = document.getElementById("consultations");
-const consultationsGrid = document.getElementById("consultations-grid");
+  const consultationsGrid = document.getElementById("consultations-grid");
+  const allCards = [...document.querySelectorAll('consultation-card')];
 
-const consultationCard = document.querySelector(".consultation-card");
-const consultationInner = document.querySelector(".consultation-inner");
-const consultationTitle = document.querySelector(".consultation-title");
-const consultationImg = document.querySelector(".consultation-img");
-const consultationText = document.querySelector(".consultation-text");
-const consultationDollars = document.querySelector(".consultation-dollars");
-
-const card = {
-  title: "title",
-  img: "img",
-  text: "hi",
-  price: "99",
-};
-
+  allCards.forEach((card)=> {
+    console.log('123' + card.title.style);
+    card.title.stlye.backgroundColor = 'red';
+  });
+  
 function addCard(title, img, imgAlt, text, dollars) {
+  const consultationsGrid = document.getElementById("consultations-grid");
+  
+  const card = {
+    title: "title",
+    img: "img",
+    text: "hi",
+    price: "99",
+  };
+
   this.title = title;
   this.img = img;
   this.imgAlt = imgAlt;
@@ -50,31 +50,40 @@ function addCard(title, img, imgAlt, text, dollars) {
   newText.innerHTML = `${text}`;
 
   //price settings
-  newPrice.textContent = '$';
+  newPrice.textContent = "$";
   newDollars.innerHTML = dollars;
 
   newPrice.appendChild(newDollars);
   newInner.appendChild(newTitle);
   newInner.appendChild(newImg);
   newInner.appendChild(newText);
-  newInner.appendChild(newPrice);  
+  newInner.appendChild(newPrice);
   newCard.appendChild(newInner);
 
-
-
   consultationsGrid.appendChild(newCard);
-
-
-  
   console.log(`Added card ${title} `);
 }
 
-function renderServices(){
-  serviceArray.forEach(service => {
+
+function cardTurn(){
+
+}
+function renderServices() {
+  serviceArray.forEach((service) => {
     console.log(service.title);
-    addCard(service.title, service.img, service.imgAlt, service.text, service.dollars);
+    addCard(
+      service.title,
+      service.img,
+      service.imgAlt,
+      service.text,
+      service.dollars
+    );
   });
 }
-
 renderServices();
 
+function postBlog() {
+  blogPost.forEach((post) => {
+    console.log(post.title);
+  });
+}

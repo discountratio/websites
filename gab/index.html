@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Raleway:wght@200;300;400;500;600;800;900&family=Roboto:wght@300;400;500;700;900&family=Source+Code+Pro&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="secondstyles.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -22,7 +22,7 @@
   <body>
     <!--  -->
     <div class="mainpage">
-      <div class="nav-background"> 
+      <section id="nav-container"> 
         <nav>
           <div class='nav-logo'>fb</div>
           <div class="nav-list">
@@ -33,31 +33,44 @@
             <li><a href="#contact">contact</a></li>
           </div>
           <div id="nav-icons">
-            <i class="fa fa-facebook"><a href="https://www.facebook.com/da.real.gabyp"></a></i>
-            <i class="fa fa-instagram"><a href="https://www.instagram.com/brujaxchapina/"></a></i>
-            <i class="fa fa-twitter"><a href="https://www.twitter.com"></a></i>
+            <a href="https://www.facebook.com/da.real.gabyp" target="_blank"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.instagram.com/brujaxchapina/" target="_blank"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
           </div>
         </nav>
-      </div>
-      <section id="home">
-        <h1>fortunate bruja</h1>
-        <img src="assets/pngs/bruja.png" alt="bruja" />
       </section>
+      <!-- END NAV -->
 
+      <!-- HOME -->
+      <section id="home">
+        <h2 class="home-title">fortunate bruja</h2>
+        <img class="home-img" src="assets/pngs/bruja.png" alt="bruja" />
+      </section>
+<!--END HOME  -->
+
+<!-- ABOUT -->
       <section id="about">
-        <h2>about me</h2>
-        <p>
+        <h2 class="section-title about-title">about me</h2>
+        <p class="about-text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere libero mollitia voluptates aliquam quaerat perferendis laboriosam quas dolor eum quos.
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate eaque ut quia voluptates, nihil sunt illum nisi inventore fugit aliquid, earum eligendi. Nesciunt officia impedit quia fugiat illo quasi minima!
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti similique reiciendis a nam impedit adipisci iure eius ducimus ipsum, iste, officiis quisquam labore! Debitis, nisi odio eaque magnam ipsam sit?
         </p>
       </section>
+<!-- END ABOUT -->
 
+<!-- CONSULTATIONS -->
+<!-- Consultations are generated in JS -->
+<!-- title, img, imgAlt, price, dollars -->
       <section id="consultations">
         <h2 class="section-title">consultations</h2>
         <div id="consultations-grid"></div>
       </section>
+<!-- END CONSULTATIONS -->
 
+<!-- BLOG -->
+<!-- Blog posts are generated in JS -->
+<!-- date, content -->
       <section id="blog">
         <h2>blog</h2>
         <div class="blog-post">
@@ -77,9 +90,7 @@
             neque tempore sed illum.
           </p>
           <i class="fa fa-heart"></i> 
-        
         </div>
-
         <div class="blog-post">
           <p class="blog-post-date">October 1 2022  </p>
           <p class="blog-post-content">
