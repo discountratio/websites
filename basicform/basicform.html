@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="basicform.css" />
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="basicform.css">
+    <script
+      src="https://kit.fontawesome.com/582ae40cce.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="" />
+    <title>Document</title>
+  </head>
 
-        <script src="https://kit.fontawesome.com/582ae40cce.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="">
-        <title>Document</title>
-    </head>
+  <body>
+    <style></style>
 
-    <body>
+    <form id="custom-form" action="">
+      <div class="form-inputs">
+        <label for="input-firstname">First Name</label>
+        <div class="input-icon-field">
+          <i class="form-icon fa-solid fa-head-side-mask"></i>
+          <input
+            id="input-firstname"
+            type="text"
+            placeholder="First name"
+            name="firstname"
+            autocapitalize="on"
+          />
+        </div>
+      </div>
 
-        <style>
+      <div class="form-inputs">
+        <label for="input-lastname">Last Name</label>
+        <div class="input-icon-field">
+          <i class="form-icon fa-solid fa-head-side-mask"></i>
+          <input
+            id="input-lastname"
+            type="text"
+            placeholder="Last name"
+            name="lastname"
+            autocapitalize="on"
+          />
+        </div>
+      </div>
 
-
-
-
-        </style>
-
-
-        <form id="custom-form" action="">
-            <div class="form-inputs">
-                <label for="input-firstname">First Name</label>
-                <div class="input-icon-field">
-                    <i class="form-icon fa-solid fa-head-side-mask"></i>
-                    <input id="input-firstname" type="text" placeholder="First name" value="" required />
-                </div>
-            </div>
-
-            <div class="form-inputs">
-                <label for="input-lastname">Last Name</label>
-                <div class="input-icon-field">
-                    <i class=" form-icon fa-solid fa-head-side-mask"></i>
-                    <input id="input-lastname" type="text" placeholder="Last name" required />
-                </div>
-            </div>
-
-
-            <div class="form-inputs">
-                <label for="input-email">Email</label>
-                <div class="input-icon-field">
-                    <i class=" form-icon fa-solid fa-envelope"></i>
-                    <input id="input-email" type="text" placeholder="discount@ratio.com" required />
-                </div>
-            </div>
-
+      <div class="form-inputs">
+        <label for="input-email">Email</label>
+        <div class="input-icon-field">
+          <i class="form-icon fa-solid fa-envelope"></i>
+          <input
+            id="input-email"
+            type="text"
+            placeholder="discount@ratio.com"
+            name="email"
+            autocapitalize="off"
+          />
+        </div>
+      </div>
+      
             <div class="form-inputs">
                 <label for="input-phone">Phone #</label>
                 <div class="input-icon-field">
                     <i class=" form-icon fa-solid fa-phone"></i>
-                    <input id="input-phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="888-123-3456"
-                        required />
+                    <input id="input-phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="888-123-3456"    name="phone"
+                     />
                 </div>
             </div>
 
@@ -61,7 +73,7 @@
                 <label for="input-address">Address</label>
                 <div class="input-icon-field">
                     <i class=" form-icon fa-solid fa-home"></i>
-                    <input id="input-address" type="text" placeholder="123 Fakestreet" required />
+                    <input id="input-address" type="text" placeholder="123 Fakestreet"    name="address" />
                 </div>
             </div>
 
@@ -70,7 +82,7 @@
                 <label for="input-city">City</label>
                 <div class="input-icon-field">
                     <i class=" form-icon fa-solid fas fa-city"></i>
-                    <input id="input-city" type="text" placeholder="Seoul" required />
+                    <input id="input-city" type="text" placeholder="Seoul"     name="city" />
                 </div>
             </div>
 
@@ -79,15 +91,14 @@
                 <label for="input-country">Country</label>
                 <div class="input-icon-field">
                     <i class=" form-icon fa-solid fa-globe"></i>
-                    <input id="input-country" type="country" placeholder="South Korea" required />
+                    <input id="input-country" type="country" placeholder="South Korea"    name="country"/>
                 </div>
             </div>
 
             <div class="form-inputs">
                 <label for="input-birthday">Birthday</label>
                 <div class="input-icon-field">
-                    <!-- <i class=" form-icon fa-solid fa-calendar"></i> -->
-                    <input id="input-birthday" type="date" placeholder="" required />
+                    <input id="input-birthday" type="date" placeholder=""     name="birthday"/>
                 </div>
             </div>
 
@@ -98,56 +109,11 @@
                 <input type="radio" id="radio2" name="radio">radio2</input>
                 <input type="radio" id="radio3" name="radio">radio3</input>
                 <input type="radio" id="radio4" name="radio">radio4</input>
-
             </fieldset>
-            <button id="form-submit">submit</button>
-        </form>
+        
+      <button id="form-submit">submit</button>
+    </form>
 
-        <script>
-            const customForm = document.getElementById('custom-form');
-       
-
-
-            const formInputs = document.querySelectorAll('.form-inputs');
-            let formInputArray = Array.from(formInputs);
-            console.log(formInputArray);
-            formInputArray.forEach(input =>{
-                input.style.border = '1px solid red';
-            });
-
-            const inputFirstName = document.getElementById('input-firstname');
-            const inputLastName = document.getElementById('input-lastname');
-            const inputEmail = document.getElementById('input-email');
-            const inputPhone = document.getElementById('input-phone');
-            const inputAddress = document.getElementById('input-address');
-            const inputCity = document.getElementById('input-city');
-            const inputCountry = document.getElementById('input-country');
-            const inputBirthday = document.getElementById('input-birthday');
-
-
-                function person(){
-                    const info = {
-                    firstname : inputFirstName.value,
-                    lastname : inputLastName.value,
-                    email : inputEmail.value,
-                    phone : inputPhone.value,
-                    address : inputAddress.value,
-                    city : inputCity.value,
-                    country : inputCountry.value,
-                    birthday : inputBirthday.value,
-                };
-                console.log(info)
-            }
-
-            const formSubmit = document.getElementById('form-submit');
-            formSubmit.addEventListener('onclick', (e)=>{
-                console.log('hello');
-            });
-                    
-
-            
-    
-        </script>
-    </body>
-
+    <script src="basicform.js"></script>
+  </body>
 </html>
