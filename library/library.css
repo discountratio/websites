@@ -1,0 +1,203 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  font-family: "Times New Roman", Times, serif;
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 3px #444;
+  margin-bottom: 2rem;
+  padding: 0 4rem;
+  white-space: nowrap;
+  width: 100vw;
+  height: 10vh;
+}
+header #header-logo {
+  font-size: clamp(2rem, 6vw, 5rem);
+}
+header #login:hover {
+  background: #5f5fff;
+}
+header #add-book:hover {
+  background: #5fff6f;
+}
+
+.book-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, 1);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-content: center;
+  align-items: top;
+  padding: 2vw;
+  gap: 2vw;
+  margin: 2vw;
+}
+
+.book-button {
+  border-radius: 4px;
+  padding: 0.25rem;
+  margin-top: 0.25rem;
+  align-items: center;
+  transition: background 200ms;
+}
+
+.new-book {
+  width: clamp(250px, 20vw, 450px);
+  height: clamp(450px, 30vw, 600px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.25rem;
+  border-radius: 16px;
+  box-shadow: 4px 4px black;
+  border: 2px solid black;
+  transition: box-shadow 300ms, margin 300ms, scale 300ms;
+  width: clamp(250px, 20vw, 450px);
+  height: clamp(450px, 30vw, 600px);
+  padding: 0;
+  background: white;
+}
+.new-book:hover {
+  box-shadow: 6px 12px goldenrod;
+  scale: 1.1;
+}
+.new-book .new-book-title {
+  white-space: wrap;
+  width: 100%;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: capitalize;
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  padding: 1rem;
+  word-wrap: normal;
+  text-justify: center;
+  text-align: center;
+}
+.new-book .new-book-author {
+  width: 100%;
+  color: black;
+  font-size: clamp(1rem, 2vw, 3rem);
+  text-align: center;
+  text-justify: center;
+  padding: 1rem;
+  text-transform: capitalize;
+}
+.new-book .new-book-img {
+  width: 100px;
+  height: 200px;
+  -o-object-position: top-left;
+     object-position: top-left;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#input-book-screen {
+  width: clamp(250px, 20vw, 450px);
+  height: clamp(450px, 30vw, 600px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.25rem;
+  border-radius: 16px;
+  box-shadow: 4px 4px black;
+  border: 2px solid black;
+  transition: box-shadow 300ms, margin 300ms, scale 300ms;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  z-index: -1;
+  -webkit-backdrop-filter: blur(1.5px);
+          backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: sepia(50%);
+          backdrop-filter: sepia(50%);
+  background: rgba(187, 187, 187, 0.3137254902);
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: consolas;
+}
+#input-book-screen:hover {
+  box-shadow: 6px 12px goldenrod;
+  scale: 1.1;
+}
+
+#input-book-menu {
+  position: relative;
+  top: 0%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 16px;
+  box-shadow: 4px 4px black;
+  transition: box-shadow 300ms, margin 300ms;
+  width: 400px;
+}
+#input-book-menu:hover {
+  box-shadow: 6px 12px black;
+}
+#input-book-menu .input-book-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem;
+  font-family: consolas;
+  border: 2px solid black;
+  padding: 0.25rem;
+  gap: 0.25rem;
+}
+#input-book-menu .input-book-div label {
+  font-size: 1.2rem;
+  text-indent: 0.5rem;
+  background: black;
+  color: white;
+}
+#input-book-menu .input-book-div input {
+  font-size: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  border: 0px solid black;
+  outline: 0px solid black;
+  background: rgb(236, 165, 84);
+  color: black;
+  text-indent: 0.5rem;
+}
+#input-book-menu .input-book-div input::-moz-placeholder {
+  color: white;
+}
+#input-book-menu .input-book-div input:-ms-input-placeholder {
+  color: white;
+}
+#input-book-menu .input-book-div input::placeholder {
+  color: white;
+}
+
+.button-on {
+  background: #44bb44;
+  color: black;
+}
+
+.button-off {
+  background: #bb4444;
+  color: white;
+}/*# sourceMappingURL=library.css.map */
