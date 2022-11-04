@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #444;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+#game-container {
+  border: 4px solid white;
+  display: grid;
+  justify-content: center;
+
+  grid-template-areas:
+    "menu"
+    "screen";
+}
+
+#game-menu {
+  grid-area: menu;
+  display: flex;
+  background: white;
+  border: 2px solid black;
+ .menu-button {
+    border: 1px solid black;
+    font-family: 'Courier New', Courier, monospace;
+  }
+}
+
+.current-button{
+    background: black;
+    color: white;
+}
+.screens{
+    display: none;
+}
+
+.current-screen {
+  display: grid;
+  grid-area: screen;
+  background: darkorange;
+  border: 4px solid purple;
+  color: black;
+  z-index:999;
+  overflow: auto;
+//   height: 200px;
+}
+
+.screens{
+    font-family: impact;
+    font-size: 4rem;
+    color: white;
+    border: 2px solid red;
+}
+
+.fight-screen{
+    background-image: url('/assets/backgrounds/dark-forest.png');
+    background-size: cover;
+    border: 5px solid blue;
+    grid-template-areas: 
+    "enemy"
+    "player";
+    grid-template-rows: 1fr 1fr;
+
+    .fight-screen-container{
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+        .fight-screen-img{
+            grid-area: img;
+            image-rendering: pixelated;
+            object-fit: contain;
+            // background: red;
+            width: 100%;
+        }
+        .fight-screen-info{
+            grid-area: info;  
+        }
+    
+    }
+
+
+    .fight-screen-player{
+        grid-area: player;
+        grid-template-areas: "img info";
+    }
+
+    .fight-screen-enemy{
+        grid-area: enemy;
+        grid-template-areas: "info img";
+    }
+   
+
+}
+

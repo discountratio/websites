@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="game.css" />
+    <!-- <script src="skills.js" defer></script> -->
+    <script src="/scripts/game.js" defer></script>
+    <script src="/scripts/enemies.js" defer></script>
+
+    <script src="/scripts/screens.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="game-container">
+      <div id="game-display">
+        <div id="game-menu">
+          <button id="menu-button-1" class="menu-button" value="opening">opening</button>
+          <button id="menu-button-2" class="menu-button" value="title">title</button>
+          <button id="menu-button-3" class="menu-button" value="loading">loading</button>
+          <button id="menu-button-4" class="menu-button" value="menu">menu</button>
+          <button id="menu-button-5" class="menu-button" value="fight">fight</button>
+          <button id="menu-button-6" class="menu-button" value="stat">stat</button>
+          <button id="menu-button-7" class="menu-button" value="inventory">inventory</button>
+        </div>
+        <div id="screen">
+          <div class="opening-screen screens"></div>
+          <div class="title-screen screens"></div>
+          <div class="loading-screen screens"></div>
+          <div class="menu-screen screens"></div>
+          <div class="fight-screen screens">
+   
+            <div class="fight-screen-player fight-screen-container">
+              <img class="fight-screen-player-img  fight-screen-img"></img>
+              <div class="fight-screen-player-info  fight-screen-info"></div>
+            </div>
+            <div class="fight-screen-enemy fight-screen-container">
+              <img class="fight-screen-enemy-img fight-screen-img"></img>
+              <div class="fight-screen-enemy-info  fight-screen-info"></div>
+            </div>
+          </div>
+          <div class="stat-screen screens"></div>
+          <div class="inventory-screen screens"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
