@@ -1,0 +1,178 @@
+@font-face {
+  font-family: "calc";
+  src: url(./assets/DejaVuSans-Bold.ttf);
+}
+@font-face {
+  font-family: calc-display;
+  src: url(./assets/calc2.otf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+#calculator {
+  font-family: "calc";
+  width: 24rem;
+  height: 34rem;
+  background: #555;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 16px;
+  box-shadow: 8px 8px 2px black;
+  margin: 2rem;
+  display: grid;
+  grid-template-areas: "display" "buttons";
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr;
+}
+
+#display {
+  box-shadow: inset 4px 4px black;
+  background: #222;
+  display: grid;
+  font-family: calc, monospace;
+  grid-template-areas: "left top" "left bottom";
+  grid-template-columns: 0.2fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  padding: 0 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#display > * {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  color: #eee;
+}
+#display #display-left {
+  grid-area: left;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+#display #display-top {
+  grid-area: top;
+  font-size: 1.25rem;
+}
+#display #display-bottom {
+  grid-area: bottom;
+  font-size: 2.5rem;
+}
+
+button,
+input[type=submit],
+input[type=reset] {
+  background: white;
+  outline: 0px solid black;
+  color: inherit;
+  border: 1px solid black;
+  box-shadow: inset 1px 1px black, 3px 3px black;
+  padding: 0;
+  border-radius: 10px;
+  font: inherit;
+  cursor: pointer;
+  transition: box-shadow 200ms;
+}
+button:hover,
+input[type=submit]:hover,
+input[type=reset]:hover {
+  box-shadow: inset 3px 3px black, 1px 1px black;
+}
+
+#buttons {
+  grid-area: buttons;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
+  gap: 0.5rem;
+  font-size: 3rem;
+  grid-template-areas: "allclear backspace sqrt divide" "seven eight nine multiply" "four five six subtract" "one two three add" "decimal zero equal add";
+}
+#buttons .number {
+  background-color: #eee;
+}
+#buttons .operator {
+  background-color: #3434dd;
+  color: #eee;
+}
+#buttons .clear {
+  background-color: #dd2222;
+  color: #eee;
+}
+#buttons .equal {
+  background-color: #ee7722;
+  color: #eee;
+}
+#buttons #zero {
+  grid-area: zero;
+}
+#buttons #one {
+  grid-area: one;
+}
+#buttons #two {
+  grid-area: two;
+}
+#buttons #three {
+  grid-area: three;
+}
+#buttons #four {
+  grid-area: four;
+}
+#buttons #five {
+  grid-area: five;
+}
+#buttons #six {
+  grid-area: six;
+}
+#buttons #six {
+  grid-area: six;
+}
+#buttons #seven {
+  grid-area: seven;
+}
+#buttons #eight {
+  grid-area: eight;
+}
+#buttons #nine {
+  grid-area: nine;
+}
+#buttons #equal {
+  grid-area: equal;
+}
+#buttons #add {
+  grid-area: add;
+}
+#buttons #subtract {
+  grid-area: subtract;
+}
+#buttons #multiply {
+  grid-area: multiply;
+}
+#buttons #divide {
+  grid-area: divide;
+}
+#buttons #decimal {
+  grid-area: decimal;
+}
+#buttons #clear {
+  grid-area: backspace;
+}
+#buttons #allclear {
+  grid-area: allclear;
+}
+#buttons #sqrt {
+  grid-area: sqrt;
+}/*# sourceMappingURL=calculator.css.map */

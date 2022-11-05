@@ -7,6 +7,7 @@
 body {
   width: 100vw;
   height: 100vh;
+  background: #999;
 }
 
 header {
@@ -32,6 +33,25 @@ header #add-book:hover {
   background: #5fff6f;
 }
 
+.book-button {
+  width: 12ch;
+  height: 4ch;
+  font-family: consolas;
+  border: none;
+  outline: none;
+  box-shadow: 2px 2px black;
+  transition: box-shadow 200ms;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 0.5rem;
+}
+.book-button:hover {
+  scale: 1.05;
+  font-weight: 800;
+  box-shadow: 4px 4px black;
+}
+
 .book-grid {
   position: relative;
   display: grid;
@@ -47,17 +67,7 @@ header #add-book:hover {
   margin: 2vw;
 }
 
-.book-button {
-  border-radius: 4px;
-  padding: 0.25rem;
-  margin-top: 0.25rem;
-  align-items: center;
-  transition: background 200ms;
-}
-
 .new-book {
-  width: clamp(250px, 20vw, 450px);
-  height: clamp(450px, 30vw, 600px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -67,59 +77,45 @@ header #add-book:hover {
   border-radius: 16px;
   box-shadow: 4px 4px black;
   border: 2px solid black;
-  transition: box-shadow 300ms, margin 300ms, scale 300ms;
   width: clamp(250px, 20vw, 450px);
   height: clamp(450px, 30vw, 600px);
-  padding: 0;
-  background: white;
-}
-.new-book:hover {
-  box-shadow: 6px 12px goldenrod;
-  scale: 1.1;
-}
-.new-book .new-book-title {
-  white-space: wrap;
-  width: 100%;
-  color: black;
-  font-family: "Times New Roman", Times, serif;
-  text-transform: capitalize;
-  font-size: clamp(1.5rem, 2vw, 3rem);
   padding: 1rem;
+  background: white;
+  position: relative;
+  display: grid;
+  grid-template-areas: "title title" "author author" "pages pages" "read remove";
+}
+.new-book > * {
+  width: 100%;
   word-wrap: normal;
   text-justify: center;
   text-align: center;
+  white-space: wrap;
+  padding: 1rem;
+  flex-shrink: 1;
+}
+.new-book .new-book-title {
+  grid-area: title;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: capitalize;
+  font-size: clamp(1rem, 2.5rem, 2.5vw);
 }
 .new-book .new-book-author {
-  width: 100%;
-  color: black;
-  font-size: clamp(1rem, 2vw, 3rem);
-  text-align: center;
-  text-justify: center;
-  padding: 1rem;
+  grid-area: author;
+  font-size: clamp(1rem, 1.5rem, 2vw);
   text-transform: capitalize;
 }
-.new-book .new-book-img {
-  width: 100px;
-  height: 200px;
-  -o-object-position: top-left;
-     object-position: top-left;
-  -o-object-fit: cover;
-     object-fit: cover;
+.new-book .new-book-pages {
+  grid-area: pages;
+}
+.new-book .new-book-read {
+  grid-area: read;
+}
+.new-book .new-book-remove {
+  grid-area: remove;
 }
 
 #input-book-screen {
-  width: clamp(250px, 20vw, 450px);
-  height: clamp(450px, 30vw, 600px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-  gap: 0.25rem;
-  border-radius: 16px;
-  box-shadow: 4px 4px black;
-  border: 2px solid black;
-  transition: box-shadow 300ms, margin 300ms, scale 300ms;
   width: 100vw;
   height: 100vh;
   display: none;
@@ -133,15 +129,14 @@ header #add-book:hover {
   top: 0;
   left: 0;
   font-family: consolas;
-}
-#input-book-screen:hover {
-  box-shadow: 6px 12px goldenrod;
-  scale: 1.1;
+  justify-content: center;
+  align-items: center;
 }
 
 #input-book-menu {
   position: relative;
   top: 0%;
+  width: 100vw;
   background: white;
   display: flex;
   flex-direction: column;
@@ -149,36 +144,30 @@ header #add-book:hover {
   align-items: center;
   padding: 1rem;
   gap: 1rem;
-  border-radius: 16px;
-  box-shadow: 4px 4px black;
-  transition: box-shadow 300ms, margin 300ms;
-  width: 400px;
-}
-#input-book-menu:hover {
-  box-shadow: 6px 12px black;
+  box-shadow: 0px 4px 4px black, 0px -2px 2px black;
 }
 #input-book-menu .input-book-div {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  margin: 1rem;
-  font-family: consolas;
-  border: 2px solid black;
   padding: 0.25rem;
   gap: 0.25rem;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
 }
 #input-book-menu .input-book-div label {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-indent: 0.5rem;
-  background: black;
-  color: white;
+  background: transparent;
+  width: 8ch;
 }
 #input-book-menu .input-book-div input {
-  font-size: 1rem;
-  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2rem;
+  font-family: "Times New Roman", Times, serif;
   border: 0px solid black;
   outline: 0px solid black;
   background: rgb(236, 165, 84);
+  width: 40ch;
   color: black;
   text-indent: 0.5rem;
 }
@@ -198,6 +187,6 @@ header #add-book:hover {
 }
 
 .button-off {
-  background: #bb4444;
+  background: #4444bb;
   color: white;
 }/*# sourceMappingURL=library.css.map */
